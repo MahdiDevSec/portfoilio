@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="src/layoutManager.js"></script>
+    
+</head>
+<body>
+    <div class="background-icons" id="backgroundIcons"></div>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">MahdiDevSec</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div class="header-content">
+            <div class="profile-image-container">
+                <img src="images/profile.jpg" alt="Meziane Mahdi" class="profile-image">
+            </div>
+            <h1>Meziane Mahdi</h1>
+            <p class="username">@MahdiDevSec</p>
+            <p>Web Developer & Web Application Penetration Tester</p>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p class="typing-text">
+                    Hello! I'm a passionate <strong>Full Stack Developer</strong> with a strong foundation in both front-end and back-end development. My journey in web development started with a curiosity about how websites work, and it has evolved into a professional career building modern web applications.
+                </p>
+                <p class="typing-text">
+                    I specialize in creating <strong>responsive</strong> and <strong>user-friendly</strong> web applications using modern technologies. My expertise includes front-end frameworks like <strong>React</strong>, back-end technologies like <strong>Node.js</strong>, and database management systems.
+                </p>
+                <p class="typing-text">
+                    With a keen eye for detail and a commitment to writing clean, efficient code, I strive to create web solutions that not only meet technical requirements but also provide an exceptional user experience. I'm constantly learning and staying up-to-date with the latest web development trends and best practices.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Technical Arsenal</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3 class="skill-category-title">Front-end</h3>
+                <div class="skills-grid">
+                    <div class="skill-hex">
+                        <div class="skill-content">
+                            <i class="fab fa-html5"></i>
+                            <h4>HTML5</h4>
+                            <p>Semantic Web Development</p>
+                        </div>
+                    </div>
+                    <div class="skill-hex">
+                        <div class="skill-content">
+                            <i class="fab fa-css3-alt"></i>
+                            <h4>CSS3</h4>
+                            <p>Modern Layouts & Animations</p>
+                        </div>
+                    </div>
+                    <div class="skill-hex">
+                        <div class="skill-content">
+                            <i class="fab fa-js"></i>
+                            <h4>JavaScript</h4>
+                            <p>ES6+ & DOM Manipulation</p>
+                        </div>
+                    </div>
+                    <div class="skill-hex">
+                        <div class="skill-content">
+                            <i class="fab fa-react"></i>
+                            <h4>React</h4>
+                            <p>Component Architecture</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="skill-category-title">Back-end</h3>
+                <div class="skills-grid">
+                    <div class="skill-hex">
+                        <div class="skill-content">
+                            <i class="fab fa-node-js"></i>
+                            <h4>Node.js</h4>
+                            <p>Server-side JavaScript</p>
+                        </div>
+                    </div>
+                    <div class="skill-hex">
+                        <div class="skill-content">
+                            <i class="fab fa-node-js"></i>
+                            <h4>Express.js</h4>
+                            <p>RESTful APIs</p>
+                        </div>
+                    </div>
+                    <div class="skill-hex">
+                        <div class="skill-content">
+                            <i class="fab fa-php"></i>
+                            <h4>PHP</h4>
+                            <p>Server-side Scripting</p>
+                        </div>
+                    </div>
+                    <div class="skill-hex">
+                        <div class="skill-content">
+                            <i class="fas fa-database"></i>
+                            <h4>MongoDB</h4>
+                            <p>NoSQL Database</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="skill-category-title">Technical Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-hex">
+                        <div class="skill-content">
+                            <i class="fab fa-git-alt"></i>
+                            <h4>Git</h4>
+                            <p>Version Control</p>
+                        </div>
+                    </div>
+                    <div class="skill-hex">
+                        <div class="skill-content">
+                            <i class="fab fa-github"></i>
+                            <h4>GitHub</h4>
+                            <p>Collaboration & CI/CD</p>
+                        </div>
+                    </div>
+                    <div class="skill-hex">
+                        <div class="skill-content">
+                            <i class="fab fa-docker"></i>
+                            <h4>Docker</h4>
+                            <p>Containerization</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="skill-category-title">Cyber Security</h3>
+                <div class="skills-grid">
+                    <div class="skill-hex">
+                        <div class="skill-content">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>OWASP Top 10</h4>
+                            <p>Web Security Standards</p>
+                        </div>
+                    </div>
+                    <div class="skill-hex">
+                        <div class="skill-content">
+                            <i class="fas fa-bug"></i>
+                            <h4>Penetration Testing</h4>
+                            <p>Security Assessment</p>
+                        </div>
+                    </div>
+                    <div class="skill-hex">
+                        <div class="skill-content">
+                            <i class="fas fa-search"></i>
+                            <h4>Vulnerability Assessment</h4>
+                            <p>Security Analysis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="images/ecommerce.jpg" alt="E-commerce Platform" class="project-image">
+                <div class="project-overlay">
+                    <h3 class="project-title">E-commerce Platform</h3>
+                    <p class="project-description">
+                        A full-stack e-commerce solution with secure payment integration, 
+                        real-time inventory management, and responsive design. Built with 
+                        React, Node.js, and MongoDB.
+                    </p>
+                    <div class="project-links">
+                        <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images/social-media.jpg" alt="Social Media Application" class="project-image">
+                <div class="project-overlay">
+                    <h3 class="project-title">Social Media Application</h3>
+                    <p class="project-description">
+                        A modern social networking platform with real-time messaging, 
+                        post sharing, and user authentication. Features robust security 
+                        measures and data encryption.
+                    </p>
+                    <div class="project-links">
+                        <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images/task-management.jpg" alt="Task Management Application" class="project-image">
+                <div class="project-overlay">
+                    <h3 class="project-title">Task Management Application</h3>
+                    <p class="project-description">
+                        A collaborative task management tool with real-time updates, 
+                        team collaboration features, and progress tracking. Implements 
+                        secure role-based access control.
+                    </p>
+                    <div class="project-links">
+                        <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images/blog-platform.jpg" alt="Blog Platform" class="project-image">
+                <div class="project-overlay">
+                    <h3 class="project-title">Blog Platform</h3>
+                    <p class="project-description">
+                        A secure and scalable blogging platform with markdown support, 
+                        comment system, and content management. Features SEO optimization 
+                        and responsive design.
+                    </p>
+                    <div class="project-links">
+                        <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2 class="section-title">Services</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3 class="service-title">Front-end Development</h3>
+                <p class="service-description">
+                    Creating responsive and interactive user interfaces with modern web technologies.
+                </p>
+                <br>
+                <ul class="service-features">
+                    <li><i class="fas fa-check-circle"></i> Responsive Web Design</li>
+                    <li><i class="fas fa-check-circle"></i> Interactive UI/UX</li>
+                    <li><i class="fas fa-check-circle"></i> Modern Frameworks (React)</li>
+                    <li><i class="fas fa-check-circle"></i> Performance Optimization</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3 class="service-title">Back-end Development</h3>
+                <p class="service-description">
+                    Building robust server-side applications and secure APIs.
+                </p>
+                <br>
+                <ul class="service-features">
+                    <li><i class="fas fa-check-circle"></i> API Development</li>
+                    <li><i class="fas fa-check-circle"></i> Database Design</li>
+                    <li><i class="fas fa-check-circle"></i> Server Management</li>
+                    <li><i class="fas fa-check-circle"></i> Security Implementation</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-layer-group"></i>
+                </div>
+                <h3 class="service-title">Full Stack Development</h3>
+                <p class="service-description">
+                    End-to-end web application development with seamless integration.
+                </p>
+                <br>
+                <ul class="service-features">
+                    <li><i class="fas fa-check-circle"></i> Complete Web Solutions</li>
+                    <li><i class="fas fa-check-circle"></i> System Architecture</li>
+                    <li><i class="fas fa-check-circle"></i> DevOps Integration</li>
+                    <li><i class="fas fa-check-circle"></i> Scalable Applications</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-section">
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="from_name" placeholder=" " required>
+                    <label>Your Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="from_email" placeholder=" " required>
+                    <label>Your Email</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="subject" name="subject" placeholder=" " required>
+                    <label>Subject</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder=" " required></textarea>
+                    <label>Your Message</label>
+                </div>
+                <button type="submit" id="button" onclick="sendMail()">
+                    <span>Send Message</span>
+                </button>
+            </form>
+        </div>
+    </section>
+    <script src="src/contact.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+   <script type="text/javascript">
+    emailjs.init('CDjOQ5QzCrYTv5MoH')
+  </script>
+    <!-- Notification Element -->
+    <div id="notification" class="notification">
+        <i class="fas fa-check-circle"></i>
+        <span id="notification-message"></span>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Meziane Mahdi. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/MahdiDevSec" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/mahdi-meziane" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const navLinksItems = document.querySelectorAll('.nav-links li');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        navLinksItems.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+    <script>
+        // Background Icons Animation
+        function createFloatingIcons() {
+            const icons = [
+                'fa-html5', 'fa-css3-alt', 'fa-js', 'fa-react', 'fa-node', 
+                'fa-python', 'fa-database', 'fa-git-alt', 'fa-docker',
+                'fa-aws', 'fa-angular', 'fa-vuejs', 'fa-php', 'fa-java',
+                'fa-terminal', 'fa-code', 'fa-laptop-code'
+            ];
+            
+            const container = document.getElementById('backgroundIcons');
+            const iconCount = 20; // Number of floating icons
+            
+            for (let i = 0; i < iconCount; i++) {
+                const icon = document.createElement('i');
+                const randomIcon = icons[Math.floor(Math.random() * icons.length)];
+                
+                icon.className = `fab floating-icon ${randomIcon}`;
+                icon.style.fontSize = Math.random() * (60 - 20) + 20 + 'px';
+                icon.style.left = Math.random() * 100 + 'vw';
+                icon.style.top = Math.random() * 100 + 'vh';
+                
+                // Random movement distance
+                const moveX = (Math.random() - 0.5) * 200 + 'px';
+                const moveY = (Math.random() - 0.5) * 200 + 'px';
+                const rotation = Math.random() * 360 + 'deg';
+                const duration = Math.random() * (40 - 20) + 20 + 's';
+                
+                icon.style.setProperty('--moveX', moveX);
+                icon.style.setProperty('--moveY', moveY);
+                icon.style.setProperty('--rotation', rotation);
+                icon.style.animationDuration = duration;
+                
+                container.appendChild(icon);
+            }
+        }
+
+        // Initialize floating icons
+        document.addEventListener('DOMContentLoaded', createFloatingIcons);
+    </script>
+    <script>
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', () => {
+            // Fade in elements
+            const fadeElements = document.querySelectorAll('.fade-in');
+            const slideElements = document.querySelectorAll('.slide-in');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            fadeElements.forEach(element => observer.observe(element));
+            slideElements.forEach(element => observer.observe(element));
+        });
+    </script>
+    <script src="dist/bundle.js"></script>
+</body>
+</html>
