@@ -279,6 +279,7 @@
                     Building robust server-side applications and secure APIs.
                 </p>
                 <br>
+                <br>
                 <ul class="service-features">
                     <li><i class="fas fa-check-circle"></i> API Development</li>
                     <li><i class="fas fa-check-circle"></i> Database Design</li>
@@ -295,6 +296,7 @@
                 <p class="service-description">
                     End-to-end web application development with seamless integration.
                 </p>
+                <br>
                 <br>
                 <ul class="service-features">
                     <li><i class="fas fa-check-circle"></i> Complete Web Solutions</li>
@@ -359,25 +361,8 @@
         </div>
     </footer>
     <script>
-        // Mobile Menu Toggle
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-        const navLinksItems = document.querySelectorAll('.nav-links li');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-
-        // Close menu when clicking a link
-        navLinksItems.forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
-    </script>
-    <script>
+        // Mobile Menu Toggle ---> deleted 2024-12-18
+        
         // Background Icons Animation
         function createFloatingIcons() {
             const icons = [
@@ -439,3 +424,5 @@
     <script src="dist/bundle.js"></script>
 </body>
 </html>
+
+<script src="src/typingEffect.js"></script>
