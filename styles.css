@@ -759,7 +759,7 @@ button:hover {
 /* Mobile Overrides */
 @media screen and (max-width: 768px) {
     .skills-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 2fr);
         gap: 1rem;
         padding: 1rem;
     }
@@ -777,7 +777,7 @@ button:hover {
     }
 
     .services-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 2fr);
         gap: 1rem;
         padding: 1rem;
     }
@@ -841,7 +841,7 @@ button:hover {
 
 /* Footer Styles */
 .footer-content {
-    max-width: 1320px;
+    max-width: 1500px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -1261,7 +1261,7 @@ section:not(:last-child)::after {
 
     /* Mobile footer */
     footer {
-        padding: 1.5rem 1rem 5rem;
+        padding: 1.5rem 1rem 2rem;
         text-align: center;
     }
 
@@ -1586,5 +1586,42 @@ p {
 
     .service-card i {
         font-size: 1.1rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    /* Hide top navbar on mobile/tablet */
+    .navbar {
+        display: none;
+    }
+
+    /* Adjust header margin since top navbar is hidden */
+    header {
+        margin-top: 0;
+    }
+
+    /* Enhance bottom tab bar visibility */
+    .bottom-tab-bar {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--card-bg);
+        backdrop-filter: blur(10px);
+        padding: 10px 0;
+        z-index: 1000;
+        justify-content: space-around;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Adjust main content padding */
+    main {
+        padding-top: 20px;
+    }
+
+    /* Ensure sections start from top without navbar offset */
+    section {
+        scroll-margin-top: 20px;
     }
 }
