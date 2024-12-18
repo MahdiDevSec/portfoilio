@@ -124,39 +124,67 @@ class LayoutManager {
         }
     }
 
-    adjustServicesSection() {
-        const servicesContainer = document.querySelector('.services-container');
-        if (!servicesContainer) return;
-
+    adjustNavigation() {
+        const navbar = document.querySelector('.navbar');
+        const navLinks = document.querySelector('.nav-links');
+    
         if (this.isMobile) {
-            // Convert to scrollable carousel for mobile
-            servicesContainer.classList.add('mobile-carousel');
-            servicesContainer.style.gridTemplateColumns = 'none';
-            servicesContainer.style.display = 'flex';
-            servicesContainer.style.overflowX = 'auto';
-            servicesContainer.style.scrollSnapType = 'x mandatory';
-            
-            const cards = servicesContainer.querySelectorAll('.service-card');
-            cards.forEach(card => {
-                card.style.flex = '0 0 85%';
-                card.style.scrollSnapAlign = 'center';
-                card.style.margin = '0 1rem';
-            });
+            // Remove mobile navigation elements
+            navbar.style.display = 'none';
+            navLinks.style.display = 'none';
+                
+            // Create bottom tab bar if it doesn't exist
+            if (!document.querySelector('.bottom-tab-bar')) {
+                const tabBar = document.createElement('div');
+                tabBar.className = 'bottom-tab-bar';
+                tabBar.innerHTML = `
+                    <a href="#home" class="tab-item active">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="#skills" class="tab-item">
+                        <i class="fas fa-code"></i>
+                        <span>Skills</span>
+                    </a>
+                    <a href="#services" class="tab-item">
+                        <i class="fas fa-cog"></i>
+                        <span>Services</span>
+                    </a>
+                    <a href="#projects" class="tab-item">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>Projects</span>
+                    </a>
+                    <a href="#contact" class="tab-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                `;
+                document.body.appendChild(tabBar);
+    
+                // Handle tab clicks
+                const tabs = tabBar.querySelectorAll('.tab-item');
+                tabs.forEach(tab => {
+                    tab.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        tabs.forEach(t => t.classList.remove('active'));
+                        tab.classList.add('active');
+                        const targetId = tab.getAttribute('href');
+                        const targetSection = document.querySelector(targetId);
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                    });
+                });
+            }
         } else {
-            // Restore grid layout for desktop
-            servicesContainer.classList.remove('mobile-carousel');
-            servicesContainer.style.gridTemplateColumns = 'repeat(3, 1fr)';
-            servicesContainer.style.display = 'grid';
-            servicesContainer.style.overflowX = 'visible';
-            
-            const cards = servicesContainer.querySelectorAll('.service-card');
-            cards.forEach(card => {
-                card.style.flex = 'none';
-                card.style.scrollSnapAlign = 'none';
-                card.style.margin = '0';
-            });
+            // Desktop navigation
+            navbar.style.display = 'block';
+            navLinks.style.display = 'flex';
+            const tabBar = document.querySelector('.bottom-tab-bar');
+            if (tabBar) {
+                tabBar.remove();
+            }
         }
     }
+    
 
     adjustProjectsSection() {
         const projectsGrid = document.querySelector('.projects-grid');
