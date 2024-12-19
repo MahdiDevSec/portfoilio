@@ -54,33 +54,47 @@ class LayoutManager {
     setupFooterScroll() {
         const footer = document.querySelector('footer');
         let lastScrollTop = 0;
+        let isFooterVisible = false;
 
-        window.addEventListener('scroll', () => {
-            if (window.innerWidth <= 768) {  // Only for tablet and mobile
+        const handleScroll = () => {
+            if (window.innerWidth <= 768) {
                 const footerRect = footer.getBoundingClientRect();
                 const currentScroll = window.pageYOffset;
                 
-                if (footerRect.top <= window.innerHeight) {
-                    // User is at footer
+                // Check if footer is in view
+                if (footerRect.top <= window.innerHeight - 100) {
+                    isFooterVisible = true;
                     if (currentScroll > lastScrollTop) {
-                        // Scrolling down
-                        document.body.style.overflow = 'hidden';
-                    } else {
-                        // Scrolling up
-                        document.body.style.overflow = 'auto';
+                        // Prevent scrolling down
+                        window.scrollTo(0, currentScroll);
                     }
                 } else {
-                    document.body.style.overflow = 'auto';
+                    isFooterVisible = false;
                 }
                 
                 lastScrollTop = currentScroll;
             }
+        };
+
+        // Add touch event handling for mobile
+        let touchStart = 0;
+        footer.addEventListener('touchstart', (e) => {
+            touchStart = e.touches[0].clientY;
         });
 
-        // Reset on resize
+        footer.addEventListener('touchmove', (e) => {
+            if (isFooterVisible) {
+                const touchEnd = e.touches[0].clientY;
+                if (touchEnd < touchStart) {
+                    e.preventDefault();
+                }
+            }
+        }, { passive: false });
+
+        window.addEventListener('scroll', handleScroll);
         window.addEventListener('resize', () => {
             if (window.innerWidth > 768) {
-                document.body.style.overflow = 'auto';
+                isFooterVisible = false;
             }
         });
     }
