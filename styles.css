@@ -916,6 +916,7 @@ button:hover {
         padding: 0 2rem;
         position: relative;
         top: -10px;
+        background-color: transparent;
     }
     .nav-links{
         display:none;
@@ -962,5 +963,6 @@ button:hover {
         padding: 0 2rem;
         position: relative;
         top: -10px;
+        background-color: transparent;
     }
 }
