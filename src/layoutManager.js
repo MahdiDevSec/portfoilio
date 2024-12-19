@@ -53,21 +53,31 @@ class LayoutManager {
 
     setupFooterScroll() {
         const footer = document.querySelector('footer');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (window.innerWidth <= 768) {  // Only for tablet and mobile
-                    if (entry.isIntersecting) {
+        let lastScrollTop = 0;
+
+        window.addEventListener('scroll', () => {
+            if (window.innerWidth <= 768) {  // Only for tablet and mobile
+                const footerRect = footer.getBoundingClientRect();
+                const currentScroll = window.pageYOffset;
+                
+                if (footerRect.top <= window.innerHeight) {
+                    // User is at footer
+                    if (currentScroll > lastScrollTop) {
+                        // Scrolling down
                         document.body.style.overflow = 'hidden';
                     } else {
+                        // Scrolling up
                         document.body.style.overflow = 'auto';
                     }
+                } else {
+                    document.body.style.overflow = 'auto';
                 }
-            });
-        }, { threshold: 0.5 });
+                
+                lastScrollTop = currentScroll;
+            }
+        });
 
-        observer.observe(footer);
-
-        // Also check on resize
+        // Reset on resize
         window.addEventListener('resize', () => {
             if (window.innerWidth > 768) {
                 document.body.style.overflow = 'auto';
