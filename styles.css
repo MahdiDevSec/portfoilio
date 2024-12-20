@@ -1010,38 +1010,110 @@ button:hover {
  
     
 }
+
+ /* Tablets */
 @media screen and (max-width: 768px) {
-    .skill-grid{
-        position:static !important;
+    .skill-category:last-child .skills-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        max-width: 600px;
+        margin: 0 auto;
     }
 
     .skill-category:last-child .skill-hex {
-        height: 100% !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        
+        height: 180px !important;
+        padding: 25px !important;
     }
 
-
-    .skill-category:last-child .skill-content {
-        position: static !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        height: 100% !important;
+    .skill-category:last-child .skill-content i {
+        font-size: 2.8rem !important;
+        margin-bottom: 15px !important;
     }
 
     .skill-category:last-child .skill-content h4 {
+        font-size: 1.3rem !important;
         margin-top: 10px !important;
-        line-height: 1.2 !important;
+    }
+
+    .skill-category:last-child .skill-content p {
+        font-size: 1.1rem !important;
     }
 }
 
 /* Mobile */
 @media screen and (max-width: 480px) {
     .skill-category:last-child .skill-hex {
-        min-height: 120px;
+        height: 160px !important;
+        padding: 20px !important;
+    }
+
+    .skill-category:last-child .skill-content i {
+        font-size: 2.4rem !important;
+    }
+
+    .skill-category:last-child .skill-content h4 {
+        font-size: 1.1rem !important;
+    }
+
+    .skill-category:last-child .skill-content p {
+        font-size: 1rem !important;
+    }
+}
+
+
+
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+    /* Keep your existing last-child styles */
+    .skill-category .skills-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+        align-items: center !important;
+        max-width: 600px !important;
+        margin: 0 auto !important;
+    }
+    /* Add styles for all other skill categories */
+    .skill-hex {
+        height: 180px !important;
+        padding: 25px !important;
+    }
+
+    .skill-content i {
+        font-size: 2.8rem !important;
+        margin-bottom: 15px !important;
+    }
+
+    .skill-content h4 {
+        font-size: 1.3rem !important;
+        margin-top: 10px !important;
+    }
+
+    .skill-content p {
+        font-size: 1.1rem !important;
+        text-align: center;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    .skill-hex {
+        height: 160px !important;
+        padding: 20px !important;
+    }
+
+    .skill-content i {
+        font-size: 2.4rem !important;
+    }
+
+    .skill-content h4 {
+        font-size: 1.1rem !important;
+    }
+
+    .skill-content p {
+        font-size: 1rem !important;
     }
 }
